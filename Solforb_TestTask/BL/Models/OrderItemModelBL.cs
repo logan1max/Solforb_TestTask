@@ -1,6 +1,6 @@
-﻿namespace Solforb_TestTask.DAL.Models
+﻿namespace Solforb_TestTask.BL.Models
 {
-    public class OrderItem
+    public class OrderItemModelBL
     {
         public int Id { get; set; }
         public int OrderId { get; set; }

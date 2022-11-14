@@ -1,7 +1,15 @@
+using Solforb_TestTask.BL.Implementations;
+using Solforb_TestTask.BL.Interfaces;
+using Solforb_TestTask.DAL.Implementations;
+using Solforb_TestTask.DAL.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IProviderBL, ProviderBL>();
+builder.Services.AddSingleton<IProviderDAL, ProviderDAL>();
 
 var app = builder.Build();
 
