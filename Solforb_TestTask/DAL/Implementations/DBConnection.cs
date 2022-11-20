@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace Solforb_TestTask.DAL.Implementations
 {
@@ -8,7 +8,7 @@ namespace Solforb_TestTask.DAL.Implementations
         {
             try
             {
-                return new SqlConnection("");
+                return new SqlConnection("Server=.\\SQLEXPRESS;Initial Catalog=SolForB;Integrated Security=True;");
             }
             catch
             {

@@ -21,6 +21,7 @@ namespace Solforb_TestTask.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            var res = providerBL.GetProviders();
             return View();
         }
 

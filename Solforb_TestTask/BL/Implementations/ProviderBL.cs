@@ -19,7 +19,7 @@ namespace Solforb_TestTask.BL.Implementations
         public IEnumerable<ProviderModelBL> GetProviders()
         {
             var config = new MapperConfiguration(cfg =>
-                cfg.CreateMap<IEnumerable<ProviderModelDAL>, IEnumerable<ProviderModelBL>>()
+                cfg.CreateMap<ProviderModelDAL, ProviderModelBL>()
             );
 
             var mapper = new Mapper(config);
