@@ -8,8 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSingleton<IOrderItemBL, OrderItemBL>();
+builder.Services.AddSingleton<IOrderItemDAL, OrderItemDAL>();
+
 builder.Services.AddSingleton<IProviderBL, ProviderBL>();
 builder.Services.AddSingleton<IProviderDAL, ProviderDAL>();
+
+builder.Services.AddSingleton<IOrderBL, OrderBL>();
+builder.Services.AddSingleton<IOrderDAL, OrderDAL>();
+
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 
